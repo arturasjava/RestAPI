@@ -8,6 +8,9 @@ import lt.vcs.restapi.repository.RemoteRepository;
 
 public class MainActivity extends AppCompatActivity {
 
+    MainActivityViewModel viewModel = null;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +18,6 @@ public class MainActivity extends AppCompatActivity {
 
         RemoteRepository remoteRepository = new RemoteRepository();
         remoteRepository.getUser();
-//        remoteRepository.getAllUsers();
+        remoteRepository.getAllUsers();
     }
 }

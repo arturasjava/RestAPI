@@ -5,6 +5,7 @@ import android.util.Log;
 import androidx.annotation.NonNull;
 
 import lt.vcs.restapi.model.UserResponse;
+import lt.vcs.restapi.model.UsersResponse;
 import lt.vcs.restapi.network.UserDataService;
 import lt.vcs.restapi.network.UserServiceClient;
 import retrofit2.Call;
@@ -35,5 +36,28 @@ public class RemoteRepository {
 
         call.enqueue(callback);
     }
+
+//    public void getAllUsers() {
+//        UserDataService service =
+//                UserServiceClient.getUserInstance().create(UserDataService.class);
+//
+//        Call<UsersResponse> call = service.getAllUsers(1, 20);
+//
+//        Callback<UsersResponse> callback = new Callback<UsersResponse>() {
+//            @Override
+//            public void onResponse(@NonNull Call<UsersResponse> call, Response<UsersResponse> response) {
+//                Log.i(LOG_TAG, "GetAllUsers onResponse: " + response.body());
+//
+//            }
+//
+//            @Override
+//            public void onFailure(@NonNull Call<UsersResponse> call, Throwable t) {
+//                Log.i(LOG_TAG, "GetAllUsers FAILED to retrieve data " + t.getMessage());
+//                call.cancel();
+//            }
+//        };
+//
+//        call.enqueue(callback);
+//    }
 
 }

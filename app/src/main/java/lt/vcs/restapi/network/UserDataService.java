@@ -1,6 +1,7 @@
 package lt.vcs.restapi.network;
 
 import lt.vcs.restapi.model.UserResponse;
+import lt.vcs.restapi.model.UsersResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
