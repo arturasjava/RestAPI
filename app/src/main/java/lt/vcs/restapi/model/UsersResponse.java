@@ -1,21 +1,25 @@
 package lt.vcs.restapi.model;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.util.List;
 
 public class UsersResponse {
-    private List<User> data;
+
+    @SerializedName("data")
+    private List<User> userData;
 
     // constructor, getters and setters
-//
-//    public List<User> getData() {
-//        return data;
-//    }
-//
-//    public void setData(List<User> data) {
-//        this.data = data;
-//    }
+
+    public List<User> getUserData() {
+        return userData;
+    }
+
+    public void setUserData(List<User> userData) {
+        this.userData = userData;
+    }
 
     public String toString() {
-        return "Users API response [data=" + data + "]";
+        return "Users API response [data=" + userData + "]";
     }
 }

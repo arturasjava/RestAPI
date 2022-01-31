@@ -70,8 +70,8 @@ public class MainActivityViewModel extends ViewModel {
         Callback<UsersResponse> callback = new Callback<UsersResponse>() {
             @Override
             public void onResponse(@NonNull Call<UsersResponse> call, Response<UsersResponse> response) {
-//                Log.i(LOG_TAG, "GetAllUsers onResponse: " + response.body());
-                users.postValue(response.body().getData());
+                Log.i(LOG_TAG, "GetAllUsers onResponse: " + response.body());
+                users.postValue(response.body().getUserData());
             }
 
             @Override
